@@ -7,4 +7,3 @@ echo $name  #prints out the name produced
 sudo tar -zcvf /var/www/html/Backups/$name.tar.gz /var/www/html/<enter name of directory> #tars the folder and stores it under Backups directory. in case a directory needs to be excluded: --exlude='/var/www/html/fxgt/gl'
 aws s3 cp /var/www/html/Backups/$name.tar.gz s3://<enter name of S3 folder>  #send the tar file to the s3
 rm -rf /var/www/html/Backups/* # delete the tar file from the Backups directory
-dsfa
