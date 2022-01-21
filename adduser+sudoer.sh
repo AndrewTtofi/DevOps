@@ -15,4 +15,4 @@ else
 	echo "Only root may add a user to the system."
 	exit 2
 fi
-echo '$username  ALL=(ALL:ALL) ALL' >> /etc/sudoers
+echo "$username  ALL=(ALL:ALL) ALL" >> /etc/sudoers
