@@ -11,6 +11,7 @@ sudo sed -i '/127.0/c\agentaddress  udp:161' /etc/snmp/snmpd.conf #change the po
 sudo bash -c "echo rocommunity gtro 10.31.0.11 >> /etc/snmp/snmpd.conf" #input the value of rocommunity on the file
 sudo service snmpd restart #restart the SNMP service to refresh the data
 sudo apt-get install telnet #Install telnet
+sudo apt-get install awscli -y #Install aws cli
 SNMP_STATUS=$(sudo service snmp status | grep Active | cut -d ":" -f 2 | cut -d " " -f 2) #set variable SNMP that will use to print output
 PHP_VERSION=$(php -v | cut -d " " -f 2 | cut -d "+" -f 1) #set variable PHP that will use to print output
 APACHE_STATUS=$(sudo service apache2 status | grep Active | cut -d ":" -f 2 | cut -d " " -f 2) #set variable Apache that will use to print output
