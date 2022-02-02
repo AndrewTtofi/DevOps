@@ -16,5 +16,5 @@ else
 	exit 2
 fi
 echo "$username  ALL=(ALL) NOPASSWD:ALL" >> /etc/sudoers #add the user to the sudoers + do not require pass for sudo
-
+sudo chsh -s /bin/bash $username
  
